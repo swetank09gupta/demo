@@ -43,7 +43,7 @@ public class RestControllerTest {
         return responseEntity;
     }
 
-    @GetMapping("/authResource")
+    @GetMapping(value = "/", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> getMessage() {
         return new ResponseEntity<>("You are accessing protected Resource", HttpStatus.OK);
     }
